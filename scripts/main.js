@@ -5,25 +5,29 @@ let items = ["Amul Small","Amul Big","Cow Milk","Chach"];
 
 let itemString = items[0] + items[1] + items[2] + items[3];
 
+//item prices
 let smallAmulPrice = 55;
 let bigAmulPrice = 54;
 let cowMilkPrice = 47;
 let chachPrice = 19;
 
-
+//item value seleted by user
 let smallAmul = document.getElementById("smallAmul").value;
 let bigAmul = document.getElementById("bigAmul").value;
 let cowMilk = document.getElementById("cowMilk").value;
 let chach = document.getElementById("chach").value;
 
+//item total  =  value * price
 let smallAmulTotal = (smallAmulPrice * smallAmul);
 let bigAmulTotal = (bigAmulPrice * bigAmul);
 let cowMilkTotal = (cowMilkPrice * cowMilk);
 let chachTotal = (chachPrice * chach);
+let totalBillValue = smallAmulTotal + bigAmulTotal + cowMilkTotal + chachTotal;
 
 printValues();
 totalBill();
 document.getElementById("billReport").innerHTML = billReport();
+document.getElementById("billReportTotal").innerHTML = billReportTotal();
 
 document.getElementById("smallAmul").addEventListener("change",()=>{smallAmul = document.getElementById("smallAmul").value;printValues();totalBill()})
 document.getElementById("bigAmul").addEventListener("change",()=>{bigAmul = document.getElementById("bigAmul").value;printValues();totalBill()})
@@ -43,10 +47,11 @@ function totalBill(){
     cowMilkTotal = (cowMilkPrice * cowMilk);
     chachTotal = (chachPrice * chach);
     
-    let totalBill = smallAmulTotal + bigAmulTotal + cowMilkTotal + chachTotal;
-    console.log(totalBill);
-    document.getElementById("totalBill").innerHTML = `<h1>`+totalBill+`<span>/-</span></h1>`;
+    totalBillValue = smallAmulTotal + bigAmulTotal + cowMilkTotal + chachTotal;
+    console.log(totalBillValue);
+    document.getElementById("totalBill").innerHTML = `<h1>`+totalBillValue+`<span>/-</span></h1>`;
     document.getElementById("billReport").innerHTML = billReport();
+    document.getElementById("billReportTotal").innerHTML = billReportTotal();
 }
 
 function billReport() {
@@ -90,6 +95,21 @@ function billReport() {
       
         </tr>
             
+    </tbody>
+  </table>`;
+}
+
+function billReportTotal() {
+    return `<table class="table  table-striped">
+    <tbody>
+      <tr>
+      <th><h1>Total : </h1></th>
+      <th><h3></h3></th>
+      <th><h3></h3></th>
+      <th><h3></h3></th>
+      <th><h3></h3></th>
+      <th><h1>`+totalBillValue+`/-</h1></th>
+      </tr>   
     </tbody>
   </table>`;
 }
