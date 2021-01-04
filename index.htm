@@ -16,9 +16,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    
 
-    <style>
+    <style type="text/css">
         .headerFontColor {
             color: white;
         }
@@ -28,12 +28,11 @@
         }
 
     </style>
-
+    
     <title>EAZY CALCS</title>
 </head>
 
-<body
-    style="background-image:url(assets/pictures/splash.png);background-repeat: no-repeat;background-position-y: 220px;">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light headerFontColor"
     style="background-color: #000000 !important;">
@@ -73,15 +72,62 @@
 
 <div class="container my-4">
   <h1>Milky Calculation</h1>
-  <div class="row">
+  <div class="row my-2">
     
-    <div class="col-3">
-      <h3>Amul Small in liter : </h3>
+    <div class="col-6">
+      <h4>Amul Small(Ltr) : </h4>
     </div>
-      <div class="col-2">
-    <input type="number" value="5" min="0" max="100" step="1"/>
+      <div class="col-6">
+        <input id="smallAmul" class="form-control-lg" data-suffix="l" type="number" value="8" data-decimals="0" min="0" max="100" step="1"/>
+      </div>
+      
   </div>
+
+  <div class="row my-2">
+    
+    <div class="col-6">
+      <h4>Amul Big(Ltr) : </h4>
+    </div>
+      <div class="col-6">
+        <input id="bigAmul" class="form-control-lg" data-suffix="l" type="number" value="4" data-decimals="0" min="0" max="100" step="1"/>
+      </div>
+      
   </div>
+
+  <div class="row my-2">
+    
+    <div class="col-6">
+      <h4>Cow Milk(Ltr) : </h4>
+    </div>
+      <div class="col-6">
+        <input id="cowMilk" class="form-control-lg" data-suffix="l" type="number" value="3" data-decimals="0" min="0" max="100" step="1"/>
+      </div>
+      
+  </div>
+
+  <div class="row my-2">
+    
+    <div class="col-6">
+      <h4>Chach(Ltr) : </h4>
+    </div>
+      <div class="col-6">
+        <input id="chach" class="form-control-lg" data-suffix="l" type="number" value="2" data-decimals="0" min="0" max="100" step="1"/>
+      </div>
+      
+  </div>
+
+  <div class="row my-2">
+    
+    <div class="col-6">
+      <h4>Total Bill : </h4>
+      <h3>Amul Big</h3>
+    </div>
+      <div id = "totalBill" class="col-6">
+      
+      </div>
+      
+  </div>
+  
 </div>
 
  <!-- Footer -->
@@ -225,11 +271,8 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-    <script src="scripts/index.js"></script>
-    <script src="./src/bootstrap-input-spinner.js"></script>
-<script>
-    $("input[type='number']").inputSpinner()
-</script>
+    <script src="scripts/main.js"></script>
+    
 </body>
 
 </html>
