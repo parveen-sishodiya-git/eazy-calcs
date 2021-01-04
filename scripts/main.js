@@ -58,7 +58,7 @@ function billReport() {
     return `<table class="table-striped">
     <tbody>
       <tr>
-      <th><h3>`+items[0]+`</h3></th>
+      <th><h3>`+items[0]+` : </h3></th>
       <th><h3>`+smallAmul+`</h3></th>
       <th><h3>X</h3></th>
       <th><h3>`+smallAmulPrice+`</h3></th>
@@ -67,7 +67,7 @@ function billReport() {
       </tr>
       
       <tr>
-      <th><h3>`+items[1]+`</h3></th>
+      <th><h3>`+items[1]+` : </h3></th>
       <th><h3>`+bigAmul+`</h3></th>
       <th><h3>X</h3></th>
       <th><h3>`+bigAmulPrice+`</h3></th>
@@ -77,7 +77,7 @@ function billReport() {
       
       
       <tr>
-      <th><h3>`+items[2]+`</h3></th>
+      <th><h3>`+items[2]+` : </h3></th>
       <th><h3>`+cowMilk+`</h3></th>
       <th><h3>X</h3></th>
       <th><h3>`+cowMilkPrice+`</h3></th>
@@ -86,7 +86,7 @@ function billReport() {
       </tr>
       
       <tr>
-      <th><h3>`+items[3]+`</h3></th>
+      <th><h3>`+items[3]+` : </h3></th>
       <th><h3>`+chach+`</h3></th>
       <th><h3>X</h3></th>
       <th><h3>`+chachPrice+`</h3></th>
