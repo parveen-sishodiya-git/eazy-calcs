@@ -55,7 +55,7 @@ function totalBill(){
 }
 
 function billReport() {
-    return `<table class="table  table-striped">
+    return `<table class="table-striped">
     <tbody>
       <tr>
       <th><h3>`+items[0]+`</h3></th>
@@ -100,7 +100,7 @@ function billReport() {
 }
 
 function billReportTotal() {
-    return `<table class="table  table-striped">
+    return `<table class="table-striped">
     <tbody>
       <tr>
       <th><h1>Total : </h1></th>
