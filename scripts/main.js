@@ -29,10 +29,10 @@ totalBill();
 document.getElementById("billReport").innerHTML = billReport();
 document.getElementById("billReportTotal").innerHTML = billReportTotal();
 
-document.getElementById("smallAmul").addEventListener("change",()=>{smallAmul = document.getElementById("smallAmul").value;printValues();totalBill()})
-document.getElementById("bigAmul").addEventListener("change",()=>{bigAmul = document.getElementById("bigAmul").value;printValues();totalBill()})
-document.getElementById("cowMilk").addEventListener("change",()=>{cowMilk = document.getElementById("cowMilk").value;printValues();totalBill()})
-document.getElementById("chach").addEventListener("change",()=>{chach = document.getElementById("chach").value;printValues();totalBill()})
+document.getElementById("smallAmul").addEventListener("input",()=>{smallAmul = document.getElementById("smallAmul").value;printValues();totalBill()})
+document.getElementById("bigAmul").addEventListener("input",()=>{bigAmul = document.getElementById("bigAmul").value;printValues();totalBill()})
+document.getElementById("cowMilk").addEventListener("input",()=>{cowMilk = document.getElementById("cowMilk").value;printValues();totalBill()})
+document.getElementById("chach").addEventListener("input",()=>{chach = document.getElementById("chach").value;printValues();totalBill()})
 
 function printValues() {
 console.log("Small Amul = "+smallAmul);
